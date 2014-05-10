@@ -19,10 +19,11 @@ $ vi <PROJECT>/.gitattributes
 *.c filter=keywords
 ---<snap>---
 
-$ mkdir <PROJECT>/.git_filters/keywords
-$ cp keywords <PROJECT>/.git_filters/keywords
+$ mkdir <PROJECT>/.git_filters/
+$ cp keywords <PROJECT>/.git_filters/
 
 to enable keyword substitution:
+$ cd <PROJECT>
 $ git config --local filter.keywords.clean ".git_filters/keywords -m clean -f %f"
 $ git config --local filter.keywords.smudge ".git_filters/keywords -m smudge -f %f"
 
